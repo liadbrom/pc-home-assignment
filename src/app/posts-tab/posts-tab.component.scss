@@ -4,15 +4,14 @@
 .tab-container {
     height: 100%;
     
-    .welcome-screen {
-        height: 100%;
-        display: grid;
-        place-items: center;
-        p {
-            text-align: center;
-            color: $secondary-text;
-            font-size: 1.5rem;
-        }
+    .welcome-message {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        text-align: center;
+        color: $secondary-text;
+        font-size: 1.5rem;
     }
 
     .posts-container {

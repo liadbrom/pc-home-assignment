@@ -4,9 +4,7 @@
         <input [formControl]="inputControl" class="search-input" placeholder="Search post..." type="search">
     </div>
     <ng-template #welcomeScreen>
-        <div class="welcome-screen">
-            <p>No posts to show. Select a user to start.</p>
-        </div>
+        <p class="welcome-message">No posts to show. Select a user to start.</p>
     </ng-template>
     <div class="posts-container">
         <ng-container *ngFor="let post of posts | async">
