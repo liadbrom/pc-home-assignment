@@ -27,3 +27,9 @@ h1, h2, h2, h4, h5, h6 {
         background: rgb(82, 82, 85);
     }
 }
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 12px;
+    }
+}

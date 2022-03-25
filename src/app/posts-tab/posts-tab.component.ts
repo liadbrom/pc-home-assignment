@@ -28,8 +28,9 @@ export class PostsTabComponent {
     ).subscribe(value => this.filterInput = value);
   }
 
-  postMatches(post: IPost, query: string): boolean {
-    return Object.values(post).slice(1).some(value => String(value).includes(query));
+  postMatches(post: IPost, input: string): boolean {
+    let query = input.toUpperCase();
+    return Object.values(post).slice(1).some(value => String(value).toUpperCase().includes(query));
   }
 
   deletePost(post: IPost): void {

@@ -1,6 +1,7 @@
 <section class="pane-container">
     <div class="header">
-        <h1 class="user-name" *ngIf="(dataService.selectedUser | async) as user; else USPlaceholder">{{user.name}}</h1>
+        <h1 [title]="user?.name" class="user-name"
+            *ngIf="(dataService.selectedUser | async) as user; else USPlaceholder">{{user.name}}</h1>
         <ng-template #USPlaceholder>
             <h1 class="user-name placeholder">Select User</h1>
         </ng-template>

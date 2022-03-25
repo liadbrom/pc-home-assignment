@@ -27,6 +27,8 @@
         font-size: 2rem;
         margin-right: auto;
         padding-right: 2rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
         color: $accent-color;
         &.placeholder {
             color: $secondary-text;
@@ -51,4 +53,10 @@
     overflow-y: auto;
     flex-grow: 1;
     position: relative;
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        padding: 1rem 0 0 3rem;
+    }
 }
