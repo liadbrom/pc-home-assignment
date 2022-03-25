@@ -1,0 +1,23 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+.post-container {
+    @include border;
+    margin: 1rem 0;
+    padding: 1rem;
+    .post-body {
+        color: $secondary-text;
+        line-height: 1.5em;
+    }
+    .delete-btn {
+        display: block;
+        margin-left: auto;
+        padding: 0.5rem 0.7rem;
+        @include border;
+        background-color: $tile-bg;
+        color: $attention-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}

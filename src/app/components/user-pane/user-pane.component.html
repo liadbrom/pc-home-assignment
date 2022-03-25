@@ -1,0 +1,13 @@
+<section class="pane-container">
+    <div class="header">
+        <h1 class="user-name" *ngIf="(dataService.selectedUser | async) as user; else USPlaceholder">{{user.name}}</h1>
+        <ng-template #USPlaceholder>
+            <h1 class="user-name placeholder">Select User</h1>
+        </ng-template>
+        <div class="tab-handle" [routerLink]="'/posts'">Posts</div>
+        <div class="tab-handle">User Details</div>
+    </div>
+    <div class="outlet-wrapper">
+        <router-outlet></router-outlet>
+    </div>
+</section>

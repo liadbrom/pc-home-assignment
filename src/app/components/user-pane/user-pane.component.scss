@@ -1,0 +1,53 @@
+@use 'colors' as *;
+
+:host {
+    flex-grow: 1;
+    flex-basis: 70%;
+    overflow: hidden;
+}
+
+.pane-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    $height: 3rem;
+    display: flex;
+    gap: 0.5rem;
+    height: $height;
+    line-height: $height;
+    padding: 2rem 0 0 4rem;
+    white-space: nowrap;
+    box-sizing: content-box;
+    background-color: $accent-bg;
+
+    .user-name {
+        font-size: 2rem;
+        margin-right: auto;
+        padding-right: 2rem;
+        color: $accent-color;
+        &.placeholder {
+            color: $secondary-text;
+        }
+    }
+
+    .tab-handle {
+        display: inline-block;
+        height: 100%;
+        padding: 0 1.2rem;
+        border-radius: 0.3rem 0.3rem 0 0;
+        font-size: 1.2rem;
+        cursor: pointer;
+        &:first-of-type {
+            border-bottom: solid 2px $accent-color;
+        }
+    }
+}
+
+.outlet-wrapper {
+    padding: 2rem 4rem;
+    overflow-y: auto;
+    flex-grow: 1;
+}

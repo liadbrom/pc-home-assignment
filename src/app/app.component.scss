@@ -1,0 +1,36 @@
+@use 'colors' as *;
+
+.page-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    background-color: $primary-bg;
+    color: $primary-text;
+}
+
+.users-list {
+    background-color: $primary-bg;
+    flex-basis: 30%;
+    height: 100%;
+    min-width: min-content;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    border-right: solid 1px #30363d;
+    overflow-y: overlay;
+}
+
+@media screen and (max-width: 900px) {
+    .page-wrapper {
+        flex-direction: column;
+    }
+    .users-list {
+        flex-direction: row;
+        overflow-x: overlay;
+        min-width: unset;
+        height: fit-content;
+        flex-basis: unset;
+        flex-shrink: 0;
+    }
+}

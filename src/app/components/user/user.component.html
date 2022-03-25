@@ -1,0 +1,8 @@
+<div class="user-container" (click)="selectUser()" [class.attention]="hasFewPosts()">
+    <h1 class="user-name">{{user?.name}}</h1>
+    <ul class="user-data">
+        <li><span>Name: </span>{{user?.username}}</li>
+        <li><span>Email: </span>{{user?.email}}</li>
+        <li><span>Website: </span>{{user?.website}}</li>
+    </ul>
+</div>

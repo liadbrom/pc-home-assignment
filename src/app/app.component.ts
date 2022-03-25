@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { IUser } from './interfaces/user';
+import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'pc-home-assignment';
+  title = 'User Viewer';
+  users: Observable<IUser[]> | undefined;
+
+  constructor(private dataService: DataService) {
+    this.users = this.dataService.getUsers();
+  }
 }

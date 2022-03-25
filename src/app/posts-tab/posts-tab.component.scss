@@ -1,0 +1,54 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+.tab-container {
+    height: 100%;
+    
+    .welcome-screen {
+        height: 100%;
+        display: grid;
+        place-items: center;
+        p {
+            text-align: center;
+            color: $secondary-text;
+            font-size: 1.5rem;
+        }
+    }
+
+    .posts-container {
+        padding: 1rem 0 2rem 0;
+    }
+}
+
+.search-box {   
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    height: 2rem;
+    align-items: stretch;
+    width: min-content;
+    box-sizing: content-box;
+    padding: 0 0.5rem;
+    @include border;
+
+    .search-icon {
+        padding: 0.3rem 0;
+    }
+
+    .search-input {
+        border: none;
+        color: white;
+        font-size: 11pt;
+        background: none;
+        &:focus {
+            outline: none;
+        }
+        &::placeholder {
+            color: $secondary-text;
+        }
+        &::-webkit-search-cancel-button
+        {
+            display: none;
+        }
+    }
+}
