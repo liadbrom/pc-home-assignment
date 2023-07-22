@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Live Demo  
 
-Published [here](https://liadbr2.github.io/pc-home-assignment) using GitHub Pages.
+Published [here](https://liadbrom.github.io/pc-home-assignment) using GitHub Pages.
 
 ## Development server
 
